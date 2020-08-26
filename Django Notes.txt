@@ -1,0 +1,974 @@
+Frame work
+----------
+
+Module: modules in python are a file with a .py extension. The name of the module will be the name of the file.
+	A python module can have set of functions,classes or variables defined and implemented.
+
+Package/Library: A Package is basically a directory with python files and file with the name __init__.py
+	This means a directory which contains a file name __init__.py will be treated as a package in python.
+	or
+	A Package is nothing but collection of Modules.
+
+Framework: A Framework is a collection of packages which helps in creating web application.
+
+Technologies required to Create a Web Application.
+--------------------------------------------------
+
+1)Front End
+-----------
+	*Html Css,JavaScript..........
+
+2)Middle ware
+-------------
+	*Python,Java.....
+
+3)Database Logic
+-----------------
+Mysql,Oracle......
+
+*How Control flows from os to python file(file created without Framework)
+	Diagram
+
+*How Control flows from os to python file(file created using Framework)
+	Diagram
+
+Client-Server Architecture
+--------------------------
+	Diagram
+
+Necessary Information Required to make a Web Request
+-----------------------------------------------------
+	Diagram.
+
+Installation of Django Framework
+--------------------------------
+	cmd: pip install Django
+
+Check Whether Django is Installed
+---------------------------------
+	cmd: pip show Django
+
+
+PROJECT
+-------
+PROJECT = APPLICATION + CONFIGURATIONS
+
+Creation of Project
+-------------------
+	cmd: django-admin startproject projectname
+
+In order to check the files/folders present within project we should makes use of 
+	cmd:dir
+
+The moment you type dir it will give you one folder with project name and one file with the name manage.py
+Now within the folder with the project name we have 5 configurer files.
+
+Creation of Application
+	cmd: python manage.py startapp appname
+	Note: Create the application within the folder where manage.py is present.
+
+Whenever you create an application, Django will automatically create few files in it.
+The cmd to check those files is cmd:dir
+
+Tree Structure:
+---------------
+
+firstproject
+	*firstproject(Folder)
+		*settings.py
+		*urls.py
+		*wgsi.py
+		*__init__.py
+		*asgi.py
+	*manage.py(Root File) 
+	*firstapp(Folder)
+		*admin.py
+		*apps.py
+		*views.py
+		*models.py
+		*tests.py
+		*__init__.py
+		*migrations(Folder)
+
+In order to run the server the command is:
+cmd: python manage.py runserver
+
+First Project
+-------------
+
+Create a project using Django Framework to display the message(Hello Abc'ians Welcome to Django Framework)
+if the client makes the web request.
+
+Tree Structure
+--------------
+
+firstproject
+	*firstproject(Folder)
+		*settings.py
+		*urls.py
+		*wgsi.py
+		*__init__.py
+		*asgi.py
+	*manage.py(Root File) 
+	*firstapp(Folder)
+		*admin.py
+		*apps.py
+		*views.py
+		*models.py
+		*tests.py
+		*__init__.py
+		*migrations(Folder)
+
+
+
+Step1: Create a project using the command.
+
+step2: Create the Application using the command(create where manage.py file is present)
+
+step3: Open Sublime Text. click on project--->click on Add Folder to project(bring the project to sublime)
+
+step4: Go to settings.py file and provide the info of appname.
+	click on settings.py---> if you scroll down you will get a list with the name Installed apps
+	within this list provide the appname
+
+step5: control will automatically go to urls.py here you should configure about views but before that
+first create view.
+
+Views.py: Business Logic is written
+Now Business Logic can be written in 2ways:
+	1)Function based views
+	2)class based views
+
+click on views.py file type v and click on enter, it will give the syntax for Function based views.
+write the logic here.
+
+step6: Once Business logic is done, configure in urls.py such that control goes to views.py
+
+COFIGURATION IN URLS:
+	1. Add an import:  from my_app import views
+        2. Add a URL to urlpatterns:  path('', views.home, name='home')
+
+step7: run the server by using the command at project level.
+
+Different Python files present within the project
+-------------------------------------------------
+
+1)settings.py:
+	      In this file we have to specify all our project settings and configuration like created application
+name and database configuration name.
+
+2)urls.py:
+	  In this file,programmer should map every request made by the user to the specific view in the application.
+
+3)wsgi.py:
+	  It stands for WebServer Gateway Interface.
+	  In this file, we have to specify the deployment file for the cloud while hosting.
+
+4)__init__.py:
+	      It is a blank script file and Django Framework treats our folder as Package because this special
+file __init__.py file is present.
+
+5)Manage.py:
+	    This file is the root of the project.
+	    using this file django supports the users to create an application
+
+Whenever we create an application in django,it creates 6 files for the user
+----------------------------------------------------------------------------
+
+    1)__init__.py: It is a blank script file and Django Framework treats our folder as Package because this special
+file __init__.py file is present.
+
+    2)Admin.py: in this file,user has to register the models created in the application, by doing this through
+the admin GUI we can access the model.
+
+    3)Apps.py: In this file, we have to specify the application specific configuration.
+
+    4)Models.py: In this file, the user has to keep information of application specified Model.
+
+    5)Tests.py: Here we write a code to test functionality view.
+
+    6)views.py: Here we write the business logic where in we have to write the code to handle the request and
+return the response to the user. 
+
+    7)Migrations(Folder): This Folder saves the information of database specification related to application
+specified model.
+
+Second Project:
+---------------
+
+WAP using Django Framework to render the ouput as Good Morning The Server time is:(current time) on the 
+web page.
+
+Tree Structure
+--------------
+
+secondproject
+	*secondproject(Folder)
+		*settings.py
+		*urls.py
+		*wgsi.py
+		*__init__.py
+		*asgi.py
+	*manage.py(Root File) 
+	*secondapp(Folder)
+		*admin.py
+		*apps.py
+		*views.py
+		*models.py
+		*tests.py
+		*__init__.py
+		*migrations(Folder)
+
+
+
+Step1: Create a project using the command.
+
+step2: Create the Application using the command(create where manage.py file is present)
+
+step3: Open Sublime Text. click on project--->click on Add Folder to project(bring the project to sublime)
+
+step4: Go to settings.py file and provide the info of appname.
+	click on settings.py---> if you scroll down you will get a list with the name Installed apps
+	within this list provide the appname
+
+step5: control will automatically go to urls.py here you should configure about views but before that
+first create view.
+
+Views.py: Business Logic is written
+Now Business Logic can be written in 2ways:
+	1)Function based views
+	2)class based views
+
+click on views.py file type v and click on enter, it will give the syntax for Function based views.
+write the logic here.
+
+step6: Once Business logic is done, configure in urls.py such that control goes to views.py
+
+COFIGURATION IN URLS:
+	1. Add an import:  from my_app import views
+        2. Add a URL to urlpatterns:  path('', views.home, name='home')
+
+step7: run the server by using the command at project level.
+
+Third Project:
+---------------
+
+WAP using Django Framework to render the ouput as Good Morning The Server time is:(current time) on the 
+web page by creating the template folder at Application level.
+
+Tree Structure
+--------------
+
+thirdproject
+	*thirdproject(Folder)
+		*settings.py
+		*urls.py
+		*wgsi.py
+		*__init__.py
+		*asgi.py
+	*manage.py(Root File) 
+	*thirdapp(Folder)
+		*admin.py
+		*apps.py
+		*views.py
+		*models.py
+		*tests.py
+		*__init__.py
+		*migrations(Folder)
+		*template(Folder)
+			*thirdapp(Folder)
+				*display.html(File)
+
+
+
+Step1: Create a project using the command.
+
+step2: Create the Application using the command(create where manage.py file is present)
+
+step3: Open Sublime Text. click on project--->click on Add Folder to project(bring the project to sublime)
+
+Steps to create the template folder at Application Level
+--------------------------------------------------------
+click on appname(thirdapp)--->click on new folder--->name the folder as template.
+Now template folder is ready.
+click on template folder--->click on new folder--->name the folder with appname(thirdapp).
+now thirdapp folder is ready.
+click on thirdapp folder--->click on new file--->name the file as display with extension html.
+
+
+step4: Go to settings.py file and provide the info of appname and template folder.
+	click on settings.py---> if you scroll down you will get a list with the name Installed apps
+	within this list provide the appname
+	
+Steps to configure template
+---------------------------
+1)click on template folder
+2)click on find in folder
+3)you will get the path of template folder copy that and go to settings.py
+4)within settings.py you have a list called as Templates within this you have dictionary called as dirs:[]
+now within this empty list paste the path and enclose it within quotes.
+
+step5: control will automatically go to urls.py here you should configure about views but before that
+first create view.
+
+Views.py: Business Logic is written
+Now Business Logic can be written in 2ways:
+	1)Function based views
+	2)class based views
+
+click on views.py file type v and click on enter, it will give the syntax for Function based views.
+write the logic here.
+
+step6: Once Business logic is done, configure in urls.py such that control goes to views.py
+
+COFIGURATION IN URLS:
+	1. Add an import:  from my_app import views
+        2. Add a URL to urlpatterns:  path('', views.home, name='home')
+
+step7: run the server by using the command at project level.
+
+Disadvantage of creating template folder at Application Level
+-------------------------------------------------------------
+
+*It would not be executing in the other systems successfully.
+*In order to overcome this we have to create the template folder at project level and configure it in settings.py
+
+Fourth Project
+--------------
+WAP using Django Framework to render the ouput as Good Morning The Server time is:(current time) on the 
+web page by creating the template folder at Project level.
+
+Tree Structure
+--------------
+fourthproject
+	*fourthproject(Folder)
+		*settings.py
+		*urls.py
+		*wgsi.py
+		*__init__.py
+		*asgi.py	
+	*manage.py(Root File) 
+	*fourthapp(Folder)
+		*admin.py
+		*apps.py
+		*views.py
+		*models.py
+		*tests.py
+		*__init__.py
+		*migrations(Folder)
+	*template(Folder)
+		*fourthapp(Folder)
+			*display.html(File)
+
+Step1: Create a project using the command.
+
+step2: Create the Application using the command(create where manage.py file is present)
+
+step3: Open Sublime Text. click on project--->click on Add Folder to project(bring the project to sublime)
+
+Steps to create the template folder at Project Level
+--------------------------------------------------------
+click on projectname(fourthproject)--->click on new folder--->name the folder as template.
+Now template folder is ready.
+click on template folder--->click on new folder--->name the folder with appname(fourthapp).
+now thirdapp folder is ready.
+click on fourthapp folder--->click on new file--->name the file as display with extension html.
+
+
+step4: Go to settings.py file and provide the info of appname and template folder.
+	click on settings.py---> if you scroll down you will get a list with the name Installed apps
+	within this list provide the appname
+	
+Steps to configure template
+---------------------------
+syntax1:
+Build paths inside the project like this: BASE_DIR / 'subdir'.
+ex: BASE_DIR / 'template'
+provide the above within value part of dictionary dirs:[]
+
+syntax2:
+within os module there is submodule path, within this there is func called as join().
+To this join provide the directories which you want to join.
+ex: os.path.join(BASE_DIR,'template')
+provide the above within value part of dictionary dirs:[]
+
+
+step5: control will automatically go to urls.py here you should configure about views but before that
+first create view.
+
+Views.py: Business Logic is written
+Now Business Logic can be written in 2ways:
+	1)Function based views
+	2)class based views
+
+click on views.py file type v and click on enter, it will give the syntax for Function based views.
+write the logic here.
+
+step6: Once Business logic is done, configure in urls.py such that control goes to views.py
+
+COFIGURATION IN URLS:
+	1. Add an import:  from my_app import views
+        2. Add a URL to urlpatterns:  path('', views.home, name='home')
+
+step7: run the server by using the command at project level.
+
+
+
+
+
+Steps to install All AUTOCOMPLETE and Djenario Plugins.
+-------------------------------------------------------
+
+1)ctrl+shift+p
+
+2)type install package--->click on PACKAGE CONTROL:INSTALL PACKAGE
+
+3)ALL AUTOCOMPLETE
+
+1)ctrl+shift+p
+
+2)type install package--->click on PACKAGE CONTROL:INSTALL PACKAGE
+
+3)Djenario
+
+
+Fifth Project
+-------------
+
+wap using Django Framework to render the output greeting msg based on the time along with the image by creating
+template at Project level and static at Application level.
+
+Tree Structure
+--------------
+fifthproject
+	*fifthproject(Folder)
+		*settings.py
+		*urls.py
+		*wgsi.py
+		*__init__.py
+		*asgi.py	
+	*manage.py(Root File) 
+	*fifthapp(Folder)
+		*admin.py
+		*apps.py
+		*views.py
+		*models.py
+		*tests.py
+		*__init__.py
+		*migrations(Folder)
+		*static(Folder)
+			*css(Folder)
+				*fifthapp.css(File)
+			*images(Folder)
+				*ganesha.jpg
+	*template(Folder)
+		*fourthapp(Folder)
+			*display.html(File)
+
+Step1: Create a project using the command.
+
+step2: Create the Application using the command(create where manage.py file is present)
+
+step3: Open Sublime Text. click on project--->click on Add Folder to project(bring the project to sublime)
+
+Steps to create the template folder at Project Level
+--------------------------------------------------------
+click on projectname(fourthproject)--->click on new folder--->name the folder as template.
+Now template folder is ready.
+click on template folder--->click on new folder--->name the folder with appname(fourthapp).
+now thirdapp folder is ready.
+click on fourthapp folder--->click on new file--->name the file as display with extension html.
+
+Steps to create the static folder at Application Level
+--------------------------------------------------------
+click on appname(fifthapp)--->click on new folder--->name the folder as static.
+Now static folder is ready.
+click on static folder--->click on new folder--->name the folder as css.
+now css folder is ready.
+click on css folder--->click on new file--->name the file as fifthapp with extension css.
+click on static folder--->click on new folder--->name the folder as images.
+now images folder is ready.
+click on images folder--->save the image.
+
+
+step4: Go to settings.py file and provide the info of appname and template folder.
+	click on settings.py---> if you scroll down you will get a list with the name Installed apps
+	within this list provide the appname
+	
+Steps to configure template
+---------------------------
+syntax1:
+Build paths inside the project like this: BASE_DIR / 'subdir'.
+ex: BASE_DIR / 'template'
+provide the above within value part of dictionary dirs:[]
+
+syntax2:
+within os module there is submodule path, within this there is func called as join().
+To this join provide the directories which you want to join.
+ex: os.path.join(BASE_DIR,'template')
+provide the above within value part of dictionary dirs:[]
+
+steps to configure static folder
+---------------------------------
+*Whenever you create static folder at Application, You need not do the configuration it is already done.
+
+
+step5: control will automatically go to urls.py here you should configure about views but before that
+first create view.
+
+Views.py: Business Logic is written
+Now Business Logic can be written in 2ways:
+	1)Function based views
+	2)class based views
+
+click on views.py file type v and click on enter, it will give the syntax for Function based views.
+write the logic here.
+
+step6: Once Business logic is done, configure in urls.py such that control goes to views.py
+
+COFIGURATION IN URLS:
+	1. Add an import:  from my_app import views
+        2. Add a URL to urlpatterns:  path('', views.home, name='home')
+
+step7: run the server by using the command at project level.
+
+Sixth Project
+-------------
+
+wap using Django Framework to render the output greeting msg based on the time along with the image by creating
+template at Project level and static at Project level.
+
+Tree Structure
+--------------
+sixthproject
+	*sixthproject(Folder)
+		*settings.py
+		*urls.py
+		*wgsi.py
+		*__init__.py
+		*asgi.py	
+	*manage.py(Root File) 
+	*sixthapp(Folder)
+		*admin.py
+		*apps.py
+		*views.py
+		*models.py
+		*tests.py
+		*__init__.py
+		*migrations(Folder)
+	*template(Folder)
+		*fourthapp(Folder)
+			*display.html(File)
+	*static(Folder)
+			*css(Folder)
+				*fifthapp.css(File)
+			*images(Folder)
+				*ganesha.jpg
+
+
+Step1: Create a project using the command.
+
+step2: Create the Application using the command(create where manage.py file is present)
+
+step3: Open Sublime Text. click on project--->click on Add Folder to project(bring the project to sublime)
+
+Steps to create the template folder at Project Level
+--------------------------------------------------------
+click on projectname(fourthproject)--->click on new folder--->name the folder as template.
+Now template folder is ready.
+click on template folder--->click on new folder--->name the folder with appname(fourthapp).
+now thirdapp folder is ready.
+click on fourthapp folder--->click on new file--->name the file as display with extension html.
+
+Steps to create the static folder at Project Level
+--------------------------------------------------------
+click on projectname(sixthproject)--->click on new folder--->name the folder as static.
+Now static folder is ready.
+click on static folder--->click on new folder--->name the folder as css.
+now css folder is ready.
+click on css folder--->click on new file--->name the file as sixthapp with extension css.
+click on static folder--->click on new folder--->name the folder as images.
+now images folder is ready.
+click on images folder--->save the image.
+
+
+step4: Go to settings.py file and provide the info of appname and template folder.
+	click on settings.py---> if you scroll down you will get a list with the name Installed apps
+	within this list provide the appname
+	
+Steps to configure template
+---------------------------
+syntax1:
+Build paths inside the project like this: BASE_DIR / 'subdir'.
+ex: BASE_DIR / 'template'
+provide the above within value part of dictionary dirs:[]
+
+syntax2:
+within os module there is submodule path, within this there is func called as join().
+To this join provide the directories which you want to join.
+ex: os.path.join(BASE_DIR,'template')
+provide the above within value part of dictionary dirs:[]
+
+steps to configure static folder
+---------------------------------
+*Whenever you create static folder at Project level,we need to configure it in settings.py.
+
+
+Build paths inside the project like this: BASE_DIR / 'subdir'.
+ex: BASE_DIR / 'static'
+provide the above within variable STATICFILES_DIR = []
+
+step5: control will automatically go to urls.py here you should configure about views but before that
+first create view.
+
+Views.py: Business Logic is written
+Now Business Logic can be written in 2ways:
+	1)Function based views
+	2)class based views
+
+click on views.py file type v and click on enter, it will give the syntax for Function based views.
+write the logic here.
+
+step6: Once Business logic is done, configure in urls.py such that control goes to views.py
+
+COFIGURATION IN URLS:
+	1. Add an import:  from my_app import views
+        2. Add a URL to urlpatterns:  path('', views.home, name='home')
+
+step7: run the server by using the command at project level.
+
+
+Note: Whenever you have multiple Application and for those application if the stylings and images for web pages
+remains same the you can have single static folder at Project level.
+
+Whenever you have multiple Application and for those application if the stylings and images for each application
+keeps changing the create separate static folder at Application level.
+
+Seventh Project
+---------------
+
+wap using Django to have multiple views.
+
+Sequence Diagram
+----------------
+
+Tree Structure
+--------------
+
+Eight Project
+-------------
+
+wap using Django to have multiple Applications.
+
+Sequence Diagram
+----------------
+
+Tree Structure
+--------------
+
+Disadvantage:
+-------------
+
+Assume we have 100 Applications
+In each application 3 views.
+
+HENCE 300 VIEWS CONFIGURATION HAS TO BE DONE IN URLS.PY(PROJECT LEVEL).
+
+In order over come the above create urls.py at Application and perform the configuration.
+-----------------------------------------------------------------------------------------
+1)if the url pattern is set at the Application level the readablity of the code increases.
+2)Maintenance of code will become simple.
+
+Whenever urlpattern is set at Application level, the below configuration has to be performed in urls.py of
+project level.
+1)import the include()
+	from django.urls import path,include
+
+2)Add a url pattern
+	path('blog/',include('blog.urls'))
+
+
+Ninth Project
+-------------
+
+Sequence Diagram
+-----------------
+
+Tree Structure
+--------------
+ninthproject
+	*ninthproject(Folder)
+		*settings.py
+		*urls.py
+		*wgsi.py
+		*__init__.py
+		*asgi.py
+	*bankapp(Folder)
+		*admin.py
+		*apps.py
+		*views.py
+		*models.py
+		*tests.py
+		*__init__.py
+		*urls.py
+		*migrations(Folder)
+		*static(Folder)
+			*css
+				*bankapp.css
+			*images
+	*countryapp(Folder)
+		*admin.py
+		*apps.py
+		*views.py
+		*models.py
+		*tests.py
+		*__init__.py
+		*urls.py
+		*migrations(Folder)
+		*static(Folder)
+			*css
+				*countryapp.css
+			*images
+	*courseapp(Folder)
+		*admin.py
+		*apps.py
+		*views.py
+		*models.py
+		*tests.py
+		*__init__.py
+		*urls.py
+		*migrations(Folder)
+		*static(Folder)
+			*css
+				*courseapp.css
+			*images
+	*Manage.py(Root File)
+	*template(Folder)
+		*bankapp
+			*display.html(File)
+		*countryapp
+			*display.html(File)
+		*courseapp
+			*display.html(File)
+
+JAVA:(MVC ARCHITECTURE)
+
+M - Models(DATABASE)
+
+v - Views(Front End,html,css...)
+
+c - controller (Business Logic-servlets,jsp,springs)
+
+In order to achieve to standardization we follow MVC Architecture.
+------------------------------------------------------------------
+
+PYTHON:(MVT ARCHITECTURE)
+
+M - Models(DATABASE)
+
+V - Views(Business Logic-Python)
+
+T - Template(Front End,html css)
+
+Note: In Settings.py within dictionary called DATABASES all the configurations shown below must be done.
+
+'ENGINE': 'django.db.backends.mysql',
+'NAME': DATABASENAME,
+USER:'root'
+PASSWORD:'root123'
+HOST:'localhost'
+port:3306
+
+Install the package called mysqlclient
+cmd: pip install mysqlclient
+
+Steps to Resolve mysqlclient Error:
+*check the python version that you are using
+	cmd: python --version
+		Python 3.8.2
+	
+	cmd: python-->click enter
+	Python 3.8.2 (tags/v3.8.2:7b3ab59, Feb 25 2020, 22:45:29) [MSC v.1916 32 bit (Intel)] on win32
+
+Go to google
+1)type python uci libraries--->click enter
+2)Python extension packages for windows - Christoph Gohlke--->click enter
+3)Go to mysql client
+
+Note:
+If python version is 3.8 and win32
+	mysqlclient‑1.4.6‑cp38‑cp38‑win32.whl(download)
+
+After downloading the above
+paste the downloaded file in folder where you have created the project.
+cmd: pip install mysqlclient‑1.4.6‑cp38‑cp38‑win32.whl
+
+if python version is 3.8 and 64bit
+	mysqlclient‑1.4.6‑cp38‑cp38‑win_amd64.whl(download)
+
+After downloading the above
+paste the downloaded file in folder where you have created the project.
+cmd: pip install mysqlclient‑1.4.6‑cp38‑cp38‑win_amd64.whl
+
+PDBC
+----
+
+connect()
+cursor()
+sql_query
+execute()
+commit()
+fecthall()
+
+In Django:
+----------
+
+Establish the Connection:
+-------------------------
+	*python manage.py shell
+		*from django.db import connection
+		*mycursor = connection.cursor()
+		*quit()   (shell will be closed)
+
+Command to Generate sqlquery
+python manage.py makemigrations
+*This is used to generate the sql query for creating the fields inside the table.
+
+In Order to check the SQL Query the command is:
+python manage.py sqlmigrate appname fileno
+ex: python manage.py databaseapp 0001
+
+In order to execute the sql query the command is:
+python manage.py migrate
+
+databaseproject
+---------------
+
+Sequence Diagram
+
+Tree Structure
+
+Step1: Create a project using the command.
+
+step2: Create the Application using the command(create where manage.py file is present)
+
+step3: Open Sublime Text. click on project--->click on Add Folder to project(bring the project to sublime)
+
+step4: Configure settings.py
+
+step5: create the necessary fields required for the table in models.py
+
+step6: Establish the Connection:
+-------------------------
+	*python manage.py shell
+		*from django.db import connection
+		*mycursor = connection.cursor()
+		*quit()   (shell will be closed)
+
+Command to Generate sqlquery
+python manage.py makemigrations
+*This is used to generate the sql query for creating the fields inside the table.
+
+In Order to check the SQL Query the command is:
+python manage.py sqlmigrate appname fileno
+ex: python manage.py databaseapp 0001
+
+In order to execute the sql query the command is:
+python manage.py migrate
+
+Note: ORM---> stands for Object Relational Mapping.
+
+we can insert the data into the database in two ways:
+1)using admin.py
+2)Taking the data from the user(Forms)
+
+wap using Django which will create a table and will insert the values using admin.py
+------------------------------------------------------------------------------------
+
+Sequence Diagram
+
+Tree Structure
+--------------
+
+Step1: Create a project using the command.
+
+step2: Create the Application using the command(create where manage.py file is present)
+
+step3: Open Sublime Text. click on project--->click on Add Folder to project(bring the project to sublime)
+
+step4: Configure settings.py
+
+step5: create the necessary fields required for the table in models.py
+
+step6: In order to provide the data to the table using admin.py GUI.
+	Register the models in admin.py
+
+step6: Establish the Connection:
+-------------------------
+	*python manage.py shell
+		*from django.db import connection
+		*mycursor = connection.cursor()
+		*quit()   (shell will be closed)
+
+Command to Generate sqlquery
+python manage.py makemigrations
+*This is used to generate the sql query for creating the fields inside the table.
+
+In Order to check the SQL Query the command is:
+python manage.py sqlmigrate appname fileno
+ex: python manage.py databaseapp 0001
+
+In order to execute the sql query the command is:
+python manage.py migrate
+
+Create the Username and Password of Admin GUI
+---------------------------------------------
+
+cmd:
+    python manage.py createsuperuser
+    *username
+    *E-mail
+    *Password
+    *Re-enter Password
+
+Once the above is done enter the username and password to get into Admin GUI.
+After getting in provide the values for the table.
+
+wap using Django which will create a table and will insert the values using admin.py and display the data from
+the table.
+
+Form Project(Taking the data from the user)
+-------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+

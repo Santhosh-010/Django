@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image</title>
+</head>
+<body>
+	{% for cricketer in cricketers %}
+	<div>
+		{{cricketer.Name}}
+	</div>
+	<div>
+		<img src="{{cricketer.cricketerimage.url}}">
+	</div>
+		
+	{% endfor %}
+
+</body>
+</html>

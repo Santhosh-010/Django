@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Batsmen details</title>
+</head>
+<body>
+	<center>
+		<h1>The Batsmen Details are:</h1>
+		{% if batsmen_lst %}
+			<table border='5'>
+				<tr>
+					<td>First_Name</td>
+					<td>Last_Name</td>
+					<td>Country</td>
+					<td>Age</td>
+					<td>Runs</td>
+					<td>Avg</td>
+					<td>Rank</td>
+					<td>Played</td>
+					<td>Strike_rate</td>
+				</tr>
+				{% for data in batsmen_lst %}
+				<tr>
+					<td>{{data.First_Name}}</td>
+					<td>{{data.Last_Name}}</td>
+					<td>{{data.Country}}</td>
+					<td>{{data.Age}}</td>
+					<td>{{data.Runs}}</td>
+					<td>{{data.Avg}}</td>
+					<td>{{data.Rank}}</td>
+					<td>{{data.Played}}</td>
+					<td>{{data.Strike_rate}}</td>	
+				</tr>
+					
+				{% endfor %}
+				
+			</table>
+
+			
+		{% else %}
+			<h1>RECORDS NOT FOUND</h1>
+			
+		{% endif %}
+	</center>
+
+</body>
+</html>

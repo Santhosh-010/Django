@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>Ganesha Festival</title>
+	<link rel="stylesheet" type="text/css" href="{% static "css/sixthapp.css" %}">
+</head>
+<body text='red'>
+	<div style="border:solid;width:17.5%">
+		<img src="{% static "images/ganesha.jpg" %}">
+	</div>
+	<div style="border:solid;width:81%;float:right;margin-top:-200px;background-color:black">
+		<center>
+		<h1>Hello: {{msg}}</h1>
+		<h1>{{msg1}}</h1>
+		<h1>The Server Time is: {{date}}</h1>
+	</center>	
+	</div>
+</body>
+</html>
